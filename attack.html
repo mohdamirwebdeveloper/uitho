@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atteck</title>
+    <link rel="stylesheet" href="utl.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/site.js"></script>
+    <script src="js/attack.js"></script>
+</head>
+
+<body onload="loadLang()">
+    <div class="root pb w100">
+        <div class="navbar w100 flex sb sbetween ycenter ">
+            <div><img class="logo m5" src="./logochotawala.svg" alt="" srcset=""></div>
+
+            <div class="flex ycenter m5">
+                <h2>Sunil's Pocket Mini</h2>
+                <img class="setting m5" src="./setting.png" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="navigation flex ycenter m5">
+            <div class="tags ca m5" data-translate="ssids">SSID</div>
+            <div class="tags cb m5" data-translate="scan">Scan</div>
+            <div class="tags cc m5" data-translate="attacks">Atteck</div>
+            <div class="indicator" id="indicator"></div>
+        </div>
+
+        <h2 class="atk m5">Attacks</h2>
+        <div class="attack-table w-100 flex-r ycenter xcenter">
+            <table style="margin-left: 20px;">
+                <thead>
+                    <tr>
+                        <th>Attacks</th>
+                        <th>Targets</th>
+                        <th>Pkts/s</th>
+                        <th>Start/Stop</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deauth</td>
+                        <td id="dtar">0</td>
+                        <td id="dpkt">0</td>
+                        <td><button id="deauth" onclick="start(0)" class="butnstyle attackpbtn stop">Start</button></td>
+                    </tr>
+                    <tr>
+                        <td>Beacon</td>
+                        <td id="btar">1</td>
+                        <td id="bpkt">0</td>
+                        <td><button id="beacon" onclick="start(1)" class="butnstyle attackpbtn start">Start</button></td>
+                    </tr>
+                    <tr>
+                        <td>Probe</td>
+                        <td id="ptar">1</td>
+                        <td id="ppkt">0</td>
+                        <td><button id="probe" onclick="start(2)" class="butnstyle attackpbtn start">Start</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h1 class="px10vh mt20">Info -</h1>
+        <p class="px10vh mt20">Your connection might drop when you start an attack.
+            For deauth, pick a target first.
+            For beacon/probe, you need to save at least one Wi-Fi name (SSID).
+            Press reload to update packet rate.
+            If something breaks, reload the page and check the serial monitor.</p>
+
+        <strong>
+            <h2 class="px10vh mt20">About the attacks </h2>
+        </strong>
+        <strong>
+            <p class="px10vh mt20">Deauth (Disconnect Devices)</p>
+        </strong>
+
+        <p class="px10vh">This stops a device from staying connected to WiFi by sending a special signal that tells it
+            to
+            disconnect.Example: Imagine kicking someone off a Zoom call by sending a fake “disconnect” message that’s
+            what this does to WiFi.</p>
+        <strong>
+            <p class="px10vh mt20">Beacon (Fake Networks)</p>
+        </strong>
+        <p class="px10vh">This creates fake WiFi networks around you by sending out WiFi names.Example: If you add names
+            like
+            “Free_WiFi” or “HackNet” to the list, they’ll show up in other people’s WiFi menus but they won’t actually
+            connect to anything.</p>
+        <strong>
+            <p class="px10vh mt20">Probe (Fake Searches)</p>
+        </strong>
+        <p class="px10vh">This makes the device act like it’s searching for saved WiFi networks, even if they’re not
+            nearby.Example:
+            It’s like walking around asking, “Is Starbucks_WiFi here?” over and over — it confuses trackers that try to
+            follow your device.</p>
+    </div>
+
+</body>
+
+</html>
