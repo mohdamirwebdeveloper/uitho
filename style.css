@@ -1,0 +1,263 @@
+html {
+    font-size: 14px;
+}
+
+* {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color: #d3d3d3;
+    outline: none;
+}
+
+.navbar {
+    padding: 10px 0 10px 0;
+}
+
+
+.sb {
+    background-color: #202224;
+}
+
+.pb {
+    background-color: #2C2F33;
+
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+.flex-r {
+    display: flex;
+    flex-direction: column;
+}
+
+.sbetween {
+    justify-content: space-between;
+}
+
+.ycenter {
+    align-items: center;
+}
+
+.xcenter {
+    justify-content: center;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100vh;
+}
+
+.logo {
+    height: 40px;
+}
+
+.setting {
+    height: 16px;
+    width: 16px;
+}
+
+
+.p10vh {
+    padding: 10vh;
+}
+
+.px10vh {
+    padding: 0 10vh 0 10vh;
+}
+
+.p10 {
+    padding: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.m5 {
+    margin: 5px;
+}
+
+.butnstyle {
+    background-color: #C53434;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: 100ms ease-in;
+}
+
+.butnstyle:hover {
+    background-color: #fc2323;
+    scale: 103%;
+}
+
+.tags {
+    width: 50px;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ca {
+    background-color: #C53434;
+}
+
+.cb {
+    background-color: #4A5568;
+}
+
+.cc {
+    background-color: #e87416;
+}
+
+.cd {
+    background-color: #1fd51f;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+
+th,
+td {
+    text-align: center;
+    padding: 0.75rem 0 0.75rem 0;
+    white-space: nowrap;
+}
+
+td {
+    width: 25%;
+}
+
+@media (max-width: 480px) {
+    .p10vh {
+        padding: 3vh;
+    }
+
+    .px10vh {
+        padding: 0 3vh 0 3vh;
+    }
+}
+
+.warning .disclaimer {
+    width: 90%;
+}
+
+.btnsize {
+    width: 60%;
+    height: 8vh;
+}
+
+.attackpbtn {
+    width: 70px;
+    height: fit-content;
+    padding: 5px;
+}
+
+.atk {
+    text-align: left;
+    font-size: 2rem;
+    margin: 20px 10px 0 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 10px;
+    border-radius: 100%;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+.addssid {
+    width: 90%;
+    padding: 10px;
+}
+
+.ssidbtn {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.sm {
+    width: 30%;
+}
+
+.ssidinp {
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    background-color: #222;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #ff3c3c;
+    border-color: #ff3c3c;
+}
+
+.checkbox-container input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 7px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    display: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+.ssidTable {
+    padding: 10px;
+}
+

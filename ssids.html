@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add SSID</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/site.js"></script>
+    <script defer src="js/ssids.js"></script>
+</head>
+
+<body>
+    <div class="root pb w100">
+        <div class="navbar w100 flex sb sbetween ycenter ">
+            <div><img class="logo m5" src="./logochotawala.svg" alt="" srcset=""></div>
+
+            <div class="flex ycenter m5">
+                <h2>Sunil's Pocket Mini</h2>
+                <img class="setting m5" src="./setting.png" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="navigation flex ycenter m5">
+            <div class="tags ca m5">SSID</div>
+            <div class="tags cb m5">Scan</div>
+            <div class="tags cc m5"><a href="attack.html">Atteck</a></div>
+            <div class="indicator" id="indicator"></div>
+        </div>
+        <h2 class="atk m5">Add SSID's</h2>
+
+        <div class="addssid flex-r">
+
+            <label for="SSID_NAME">Enter SSID</label>
+            <input class="sb ssidinp m5" type="text" name="SSID_NAME" id="SSID_NAME"
+                placeholder="Enter the wifi name you want to create.">
+
+            <div class="checkbox-container flex ycenter">
+                <label for="SSID_PASSWORD">With password?</label>
+                <input class="sb ssidinp m5" type="checkbox" name="SSID_PASSWORD" id="SSID_PASSWORD">
+            </div>
+            <label for="SSID_NUMBER">Number</label>
+            <input class="sb ssidinp sm m5" type="number" value="1" max="60" name="SSID_NUMBER" id="SSID_NUMBER">
+
+            <div class="checkbox-container flex ycenter">
+                <label for="ow">Overwrtie</label>
+                <input class="sb ssidinp m5" type="checkbox" value="1" max="60" name="ow" id="ow">
+            </div>
+
+            <div class="flex xcenter w100">
+                <button class="butnstyle btnsize mt20" onclick="add()">
+                    <h3>Add</h3>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="flex m5 ycenter">
+            <button onclick="addSelected()" class="sb ssidinp">Clone selected APs</button>
+            
+            <svg id="dssid" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" xmlns:v="https://vecta.io/nano">
+                <path
+                    d="M7 21c-.55 0-1.021-.196-1.412-.587S5 19.55 5 19V6H4V4h5V3h6v1h5v2h-1v13c0 .55-.196 1.021-.587 1.413S17.55 21 17 21H7zM17 6H7v13h10V6zM9 17h2V8H9v9zm4 0h2V8h-2v9z"
+                    fill="#c53434" />
+            </svg>
+        </div>
+        <label for="">Time Interval</label>
+        <input class="sb ssidinp sm m5" id="interval" name="interval" type="number" value="10" max="600" min="1">s
+
+        <div class="flex"><button onclick="enableRandom()" class="sb ssidinp" id="randomBtn">Enable random Mode instead</button> </div>
+        <h2 class="m5">SSID List Instructions</h2>
+        <ol style="line-height: 1.6; padding: 25px;">
+            <li>This SSID list is used for the beacon and probe attack.</li>
+            <li>Each SSID can be up to 32 characters.</li>
+            <li>Don't forget to click Save after editing an SSID.</li>
+            <li>You must click Reload after cloning SSIDs.</li>
+        </ol>
+
+        <div class="">
+            <table id="ssidTable"></table>
+        </div>
+    </div>
+</body>
+
+</html>
