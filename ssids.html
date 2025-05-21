@@ -10,20 +10,20 @@
     <script defer src="js/ssids.js"></script>
 </head>
 
-<body>
+<body onload="loadLang()">
     <div class="root pb w100">
         <div class="navbar w100 flex sb sbetween ycenter ">
-            <div><img class="logo m5" src="./logochotawala.svg" alt="" srcset=""></div>
+            <div id="logoe"></div>
 
             <div class="flex ycenter m5">
                 <h2>Sunil's Pocket Mini</h2>
-                <img class="setting m5" src="./setting.png" alt="" srcset="">
+                <div id="sico" class="flex xcenter"></div>
             </div>
         </div>
 
         <div class="navigation flex ycenter m5">
             <div class="tags ca m5">SSID</div>
-            <div class="tags cb m5">Scan</div>
+            <div class="tags cb m5"><a href="scan.html">Scan</a></div>
             <div class="tags cc m5"><a href="attack.html">Atteck</a></div>
             <div class="indicator" id="indicator"></div>
         </div>

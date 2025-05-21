@@ -2,6 +2,14 @@ html {
     font-size: 14px;
 }
 
+body {
+    background-color: #2C2F33;
+}
+
+button {
+    cursor: pointer;
+}
+
 * {
     font-family: "Outfit", sans-serif;
     margin: 0;
@@ -62,8 +70,9 @@ h2 {
     height: 100vh;
 }
 
-.logo {
-    height: 40px;
+
+.br8 {
+    border-radius: 8px;
 }
 
 .setting {
@@ -84,12 +93,29 @@ h2 {
     padding: 10px;
 }
 
+.p15 {
+    padding: 15px;
+}
+
+
+.w50 {
+    width: 50%;
+}
+
 .mt20 {
     margin-top: 20px;
 }
 
 .m5 {
     margin: 5px;
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.cp {
+    cursor: pointer;
 }
 
 .butnstyle {
@@ -101,8 +127,21 @@ h2 {
 }
 
 .butnstyle:hover {
-    background-color: #fc2323;
-    scale: 103%;
+    background-color: #f22828;
+    scale: 102%;
+}
+
+.butnstyle-2 {
+    background-color: #202224;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: 100ms ease-in;
+}
+
+.butnstyle-2:hover {
+    background-color: #191a1c;
+    scale: 102%;
 }
 
 .tags {
@@ -131,6 +170,10 @@ h2 {
     background-color: #1fd51f;
 }
 
+.cf {
+    background-color: #23272c;
+}
+
 table {
     width: 95%;
     border-collapse: collapse;
@@ -149,13 +192,33 @@ td {
     width: 25%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 820px) {
     .p10vh {
         padding: 3vh;
     }
 
     .px10vh {
         padding: 0 3vh 0 3vh;
+    }
+
+    #apTable .id,
+    #apTable .enc,
+    #apTable .mac,
+    #apTable .vendor,
+    #apTable .name,
+
+    #stTable .id,
+    #stTable .pkts,
+    #stTable .lastseen,
+    #stTable .mac,
+
+    #nTable .id,
+    #nTable .vendor,
+    #nTable .ap,
+    #nTable .mac,
+
+    #ssidTable .id {
+        display: none;
     }
 }
 
@@ -176,7 +239,7 @@ td {
 
 .atk {
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 20px 10px 0 10px;
 }
 
@@ -261,3 +324,12 @@ td {
     padding: 10px;
 }
 
+.sbtnc {
+    width: 90%;
+}
+
+.ptd {
+    max-width: 7.3vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

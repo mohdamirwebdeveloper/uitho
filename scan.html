@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Networks</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/site.js"></script>
+    <script defer src="js/scan.js"></script>
+</head>
+
+<body onload="loadLang()">
+    <div class="root pb w100">
+        <div class="navbar w100 flex sb sbetween ycenter ">
+            <div id="logoe"></div>
+
+            <div class="flex ycenter m5">
+                <h2>Sunil's Pocket Mini</h2>
+                <div id="sico" class="flex xcenter"></div>
+            </div>
+        </div>
+
+        <div class="navigation flex ycenter m5">
+            <div class="tags ca m5"><a href="ssids.html">SSID</a></div>
+            <div class="tags cb m5">Scan</div>
+            <div class="tags cc m5"><a href="attack.html">Atteck</a></div>
+            <div class="indicator" id="indicator"></div>
+        </div>
+        <h2 class="atk m5">Add SSID's</h2>
+
+        <div class="flex w100 ycenter oh mt20">
+            <button id=scanZero onclick="scan(0)" class="butnstyle w50 p15 m5">Scan APs</button>
+            <button id=scanOne onclick="scan(1)" class="butnstyle-2 w50 p15 m5">Scan Station</button>
+        </div>
+
+        <div class="flex w100 sbetween">
+            <div class="w50">
+
+                <label class="m5" for="ch" data-translate="channel">Channel</label>
+                <select class="sb ssidinp sm" id="ch" name="ch">
+                    <option value="all" data-translate="all">All</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                </select>
+            </div>
+            <div class="w50 flex ycenter">
+                <label data-translate="station_scan_time">Scan duration</label>
+                <input class="sb ssidinp sm" type="number" value="15" id="scanTime">s
+            </div>
+        </div>
+        <h3 class="mt20 m5">Scan Results - </h3>
+        <div class="c-acp flex xcenter mt20">
+            <div class="bg cf p15 sbtnc br8">
+                <h2><strong>Access Points Found</strong><span id="apNum"></span></h2>
+                <table id="apTable"></table>
+                <div class="flex w100 ycenter oh mt20">
+                    <button onclick="selectAll(0,true)" class="butnstyle w50 p10">Select All</button>
+                    <button onclick="selectAll(0,false)" class="cb butnstyle-2 w50 p10 m5">Deselect All</button>
+                </div>
+            </div>
+        </div>
+        <div class="c-acp flex xcenter mt20">
+            <div class="bg cf p15 sbtnc br8">
+                <h2><strong>Station's Found</strong> <span id="stNum"></span></h2>
+                <table id="stTable"></table>
+                <div class="flex w100 ycenter oh mt20">
+                    <button onclick="selectAll(1,true)" class="butnstyle w50 p10">Select All</button>
+                    <button onclick="selectAll(1,false)" class="cb butnstyle-2 w50 p10 m5">Deselect All</button>
+                </div>
+            </div>
+        </div>
+        <div class="c-acp flex xcenter mt20">
+            <div class="bg cf p15 sbtnc br8">
+                <h2><strong>Saved Access Points</strong><span id="nNum"></span></h2>
+                <table id="nTable"></table>
+                <div class="flex w100 ycenter oh mt20">
+                    <button onclick="selectAll(2,true)" class="butnstyle w50 p10">Select All</button>
+                    <button onclick="selectAll(2,false)" class="cb butnstyle-2 w50 p10 m5">Deselect All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
